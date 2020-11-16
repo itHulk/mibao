@@ -1,0 +1,140 @@
+.swiperBox{
+	width: 100%;
+	height: 500rpx;	
+}
+.swiper{
+	height: 100%;
+}
+.countBox{
+	width: 680rpx;
+	margin: 0 auto;
+	color: #777778;
+	margin-top: 30rpx;
+}
+.dec{
+	font-size: 32rpx;
+	font-weight: 500;
+	color: #333;
+}
+.topimg{
+	width: 100%;	
+	display: block;
+	position: fixed;
+  left: 0;
+  top: 0;
+}
+.topimg image{
+	width: 100%;
+  height: 500rpx;
+}
+.righttxt{
+	text-align: right;
+	font-size: 26rpx;
+}
+.userBox{
+	position: absolute;
+	left: 25rpx;
+	top: -58rpx;
+	width: 600rpx;
+	display: flex;
+	justify-content: flex-start;
+	
+}
+.userBox image{
+	width: 100rpx;
+	height: 100rpx;
+	border-radius:50% ;
+	border: 8rpx solid #fff;
+	margin-right: 10rpx;
+	box-shadow:0 6rpx 6rpx #ccc;
+
+}
+.userBox .name{
+	color: #fff;
+	line-height: 58rpx;
+	font-weight: bold;
+	font-size: 35rpx;
+	
+}
+.con-ads{
+	font-size: 22rpx;
+}
+.itemimg{
+	display: block;
+	width: 680rpx;
+	margin: 0 auto;
+	margin-top: 40rpx;
+	/* height: auto; */
+ 
+}
+.imgBox{
+	margin-bottom: 40rpx;
+}
+.detatopbox{
+	width: 100rpx;
+	height: 100rpx;
+	position: fixed;
+	
+	left:10rpx ;
+	z-index: 2;
+}
+
+.blackimg{
+	width: 40rpx;
+	height: 40rpx;
+	position: absolute;
+	left: 30rpx;
+	top:30rpx ;
+}
+.delBtn,.resBtn{
+	width: 100rpx;
+	height: 100rpx;
+	border-radius:50% ;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+.delBtn{
+	background: #F56C6C;
+}
+.resBtn{
+	background:#409EFF;
+	bottom: 180rpx;
+}
+.detailBox{
+  width: 100%;
+	top: 470rpx;
+	position: absolute;
+	z-index: 22;
+	background: #fff;
+	border-radius: 30rpx 30rpx 0 0;
+  padding-top: 60rpx;
+  
+}
+
+
+.customBarGrid.bgnone{background: none;}
+.customBarGrid.bgf{background: #fff;}
+
+.btnBox{
+	width: 100rpx;
+	position: fixed;
+	right: 2%;
+	z-index: 23;
+	bottom: 50rpx;
+}
+.rightBtn{
+	margin-top: 25rpx;
+	display: flex;
+	justify-content: center;
+}
+.btnimg{
+	width: 60rpx;
+	height: 60rpx;
+}
+.delDoc{
+	width: 100%;
+	height: 100rpx;
+	
+}

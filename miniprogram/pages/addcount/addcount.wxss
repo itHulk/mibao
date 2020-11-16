@@ -1,0 +1,104 @@
+.countBox{
+	width: 680rpx;
+	margin:0 auto;
+	padding: 35rpx 0;
+  position: absolute;
+  left: 35rpx;
+}
+.textBox{
+	font-size: 30rpx;
+	max-height:200rpx ;
+	width: 100%;
+}
+.imgBox{
+	width: 100%;
+	display: flex;
+	 flex-direction: row;
+	justify-content:flex-start;
+	 flex-wrap: wrap;
+	margin-bottom: 40rpx;
+	margin-top: 30rpx;
+}
+.img{
+	width: 210rpx;
+	height: 210rpx;
+	margin: 9rpx 9rpx;
+	position: relative;
+}
+.location{
+	display: flex;
+	justify-content:flex-start ;
+}
+.loacimg{
+	width: 35rpx;
+	height: 35rpx;
+	margin-right: 10rpx;
+}
+.delimg{
+	width: 40rpx;
+	height: 40rpx;
+	position: absolute;
+	top: 10rpx;
+	right: 10rpx;
+}
+.del{
+	width: 100%;
+	height: 100%;
+}
+.location{
+	display: flex;
+	justify-content: flex-start;
+	color: #777778;
+	font-size: 30rpx;
+	margin: 20rpx auto;
+}
+.location text{
+	line-height: 35rpx;
+}
+.locationname{
+	width: 450rpx;
+	overflow: hidden;
+	text-overflow:ellipsis;overflow:hidden;white-space:nowrap;
+	color: #ff5252;
+}
+.isnanfang{
+	height:35rpx;
+	width:62rpx ;
+}
+.sumbit{
+	width: 100%;
+	height: 80rpx;
+	text-align: center;
+	color: #fff;
+	background:#ff5252 ;
+	border-radius: 20rpx 20rpx 0 0;
+	line-height: 70rpx;
+	
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+.blackimg{
+	width: 60rpx;
+	height: 60rpx;
+	position: absolute;
+	left: 25rpx;
+	top:75rpx ;
+}
+.detatopbox{
+	width: 100rpx;
+	height: 100rpx;
+	position: fixed;
+	
+	left:10rpx ;
+	z-index: 2;
+}
+
+.blackimg{
+	width: 40rpx;
+	height: 40rpx;
+	position: absolute;
+	left: 30rpx;
+	top:30rpx ;
+}

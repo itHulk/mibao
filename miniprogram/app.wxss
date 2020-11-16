@@ -1,0 +1,64 @@
+/**app.wxss**/
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+@import "iconfont.wxss"; /* iconfont */
+page{
+	width: 100%;
+	height: 100%;
+}
+button {
+  background: initial;
+}
+
+button:focus{
+  outline: 0;
+}
+
+button::after{
+  border: none;
+}
+.indexbg{
+	width: 200%;
+	height: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+.icon{
+	color: #fff;
+	font-size: 50rpx;
+	display: block;
+}
+.imgbg{
+	width: 100%;
+	height: 100%;
+	transform: scale(1.2);
+	-webkit-filter:blur(10px);
+	
+}
+.topbox{
+	width: 100%;
+	height: 140rpx;
+	color: #333;
+	font-size: 30rpx;
+	text-align: center;
+	line-height: 195rpx;
+	position: relative;
+}
+.clear:after{content:'';display:block;clear:both; overflow: hidden}
+.fl{float: left;}
+.fr{float: right;}
+
+
+/* 自定义顶部状态栏 */
+.customBarGrid{ display: block; position: fixed;background: #fff; font-size: 32rpx; left: 0; top: 0; width: 100%;z-index: 24;}
+.barGroup{  display: flex; align-items: center; min-height: 100rpx; justify-content: space-between; position: fixed; width: 100%; top:0; z-index: 1024; text-align: center;position: relative;}
+.barGroup .action{ display: flex; align-items: center; height: 100%; justify-content: center; max-width: 100%; color: #454545;position: relative; z-index: 2; }
+.barGroup .action:first-child{ margin-left: 30rpx; font-size: 30rpx;}
+.barGroup .action:last-child{ margin-right: 30rpx; }
+.barGroup .action > text[class*="icon"], .barGroup .action > view[class*="icon"] { font-size:40rpx;  }
+.barGroup .action:first-child>text[class*="icon"] { margin-left:-0.3em; margin-right:0.3em; }
+.customtitle{
+	width: 100%;
+	text-align: center;position: absolute; left: 0; 
+}

@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container" >
+	<image src="../../images/indeximg.jpg" class="indexbg"></image>
+  <!-- 用户 openid -->
+ <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+	  wx-if="{{!islogin}}"
+    ></button>
+  </view>
+	<view class="fromBox">
+		<text class="passtxt"  wx:if="{{isTest}}">授权登录</text>
+		<input wx:if="{{!isTest}}" type="number" class="passtxt" password="true" placeholder="请输入米宝的生日" bindinput="bindKeyInput" value="{{passData}}" maxlength='8' />
+	</view>
+	
+</view>

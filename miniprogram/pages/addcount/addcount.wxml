@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container" wx:if="{{istest}}" style="margin-top:{{ CustomBar }}px;">
+	我是一个设计爱好者、斜杠青年、伪文青，同时也是一位前端攻(ban)城(zhuan)狮(de)。
+
+目前在帝都的一家互联网公司供职。平时不忙时，喜欢偶发性改改UI、写写一些稀奇古怪的界面，然后发布一些围绕YzmCMS的 模版主题。
+
+如你所见，这是我的个人博客自留地。后台采用了 袁志蒙 的优秀轻量级后台管理程序 YzmCMS - v5.2版本，前端界面则由我独自设计与开发，当前博客模板主题为：Avatar v1.2.2 Beta。
+
+当前了，毕竟我只是一位设计爱好者，在审美设计上也有许多的缺陷和不足。如果你有一些好的想法、创意或者寻求帮助的话，可以发邮件给我(tonney@duoguyu.com) 或者 到YzmCMS社区逛逛。
+</view>
+<view class="container" wx:if="{{!istest}}">
+	<view class="customBarGrid fixed " wx:if='{{ isBarShow }}' style="height:{{ CustomBar }}px;padding-top:{{ StatusBar }}px;">
+	  <view class="barGroup" style="height:{{ CustomBar-20 }}px;">
+	    <view class="detatopbox" bindtap="toBack" style="top:{{ StatusBar }}px;">
+	    	<image src="../../images/back.png" class="blackimg"></image>
+	    </view>
+		<view class="customtitle">米宝</view>
+	  </view>
+	</view>
+	<view class="countBox" style="top:{{ CustomBar }}px;">
+		<textarea class="textBox" placeholder="你想揍她几次" value="{{textvalue}}" maxlength='20000' bindinput="bindKeyInput">	
+		</textarea>
+		<view class="imgBox">
+			<view wx:for="{{imgList}}" bindtap="showdel" wx:key="index" class="img" style="background: url({{item}}) no-repeat; background-position: center; background-size: cover;">
+				<view wx:if="{{isdel}}" class="delimg" bindtap="delimg" data-index="{{index}}"> 
+					<image class="del" src="../../images/delete.png"></image>
+				</view>
+			</view>
+			<view class="addimg img"  bindtap="chooseImg">
+				
+				<image style="width: 100%; height: 100%;" src="../../images/add.jpg"></image>
+				<!-- <image style="width: 100%; height: 100%;" src="cloud://jingchu-1d00o.6a69-jingchu-1d00o-1259566091/1564125969986.jpg"></image> -->
+				<!-- <image style="width: 100%; height: 100%;" src="https://6a69-jingchu-1d00o-1259566091.tcb.qcloud.la/1564125969986.jpg"></image> -->
+			</view>
+		</view>
+		<view class="location" bindtap='chooseLocation'>
+			<image class="loacimg"  src="../../images/loca.png"></image>
+			<text class="" >选择位置：</text>
+			<text class="locationname">{{locationname}}</text>
+		</view>
+		<view class="location" bindtap="seltype">
+			<image class="loacimg" src="../../images/girl.png"></image>
+			<text>米宝照片：</text>
+			<image class="isnanfang" src="../../images/onoff{{isnanfang?1:0}}.png"></image>
+		</view>
+		
+	</view>
+	<view class="sumbit" bindtap="sunbit">保存</view>
+</view>

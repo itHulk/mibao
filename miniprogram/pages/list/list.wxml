@@ -1,0 +1,69 @@
+ 
+<scroll-view lower-threshold='10' bindscrolltolower="scrolltolower" scroll-y class="DrawerPage {{modalName=='viewModal'?'show':''}}">
+ 	<view class="customBarGrid" wx:if='{{ isBarShow }}' style="height:{{ CustomBar }}px;">
+ 	  <view class="barGroup" style="height:{{ CustomBar }}px;padding-top:{{ StatusBar-10 }}px;">  
+ 		<view class="customtitle">{{istest?'码农':'米宝'}}</view>
+ 	  </view>
+ 	</view>		
+	<view wx:if='{{ isBarShow }}' style="width:100%; height:{{ CustomBar }}px;"></view>
+	<view class="indexbg">
+		<image src="../../images/bg.jpg" class="imgbg"></image>
+	</view>
+	
+	<view class="container">
+		<view class="listbox leftlist">
+			<view class="list" bindtap="toDetails" wx:for="{{leftarr}}" wx:key="index" data-id="{{item._id}}">
+				<image wx:if="{{!item.obj.firstImg}}" class="list-image" lazy-load="true" mode="widthFix" src="{{item.obj.imgList[0].tempFileURL}}"></image>
+				<image wx:if="{{item.obj.firstImg}}" class="list-image" lazy-load="true" mode="widthFix" src="{{item.obj.firstImg}}"></image>
+				<text class="dec">{{item.obj.textValue}}</text>
+				<text wx:if="{{item.obj.addName=='无'?false:true}}" class="addname">{{item.obj.addName}}</text>
+				<view class="userinfo">
+					<image class="avatar" src="{{item.obj.userInfo.avatarUrl}}"></image>
+					<text class="name">{{item.obj.userInfo.nickName}}</text>			
+				</view>
+				<view wx:if="{{item.obj.isNanfang}}" class="agetab {{item.obj.dataType>0?'jinnianri':''}}">{{item.obj.nfAge}}</view>
+			</view>
+		</view>
+		<view class="listbox rightlist">
+			<view class="list" bindtap="toDetails" wx:for="{{rightarr}}" wx:key="index" data-id="{{item._id}}">
+				<image wx:if="{{!item.obj.firstImg}}" class="list-image" lazy-load="true" mode="widthFix" src="{{item.obj.imgList[0].tempFileURL}}"></image>
+				<image wx:if="{{item.obj.firstImg}}" class="list-image" lazy-load="true" mode="widthFix" src="{{item.obj.firstImg}}"></image>
+				<text class="dec">{{item.obj.textValue}}</text>
+				<text wx:if="{{item.obj.addName=='无'?false:true}}" class="addname">{{item.obj.addName}}</text>
+				<view class="userinfo">
+					<image class="avatar" src="{{item.obj.userInfo.avatarUrl}}"></image>
+					<text class="name">{{item.obj.userInfo.nickName}}</text>			
+				</view>
+				<view wx:if="{{item.obj.isNanfang}}" class="agetab {{item.obj.dataType>0?'jinnianri':''}}">{{item.obj.nfAge}}</view>
+			</view>
+		</view>
+		
+	</view>
+	<view class="botMsg" wx:if="{{isBottom && !istest}}">靓照到此结束</view>
+	<view class="addicon" bindtap="addcount" wx:if="{{!istest}}">
+		<image class="addimg" src="../../images/add.png"></image>
+	</view>
+	<view class="navicon" bindtap="showModal" data-target="viewModal" wx:if="{{!istest}}">
+		<image class="addimg" src="../../images/navli.png"></image>
+	</view>
+	
+ </scroll-view>
+<view class="DrawerClose {{modalName=='viewModal'?'show':''}}" bindtap="hideModal">
+ 	<text class="cuIcon-pullright"></text>
+ </view>
+ <scroll-view scroll-y class="DrawerWindow {{modalName=='viewModal'?'show':''}}">
+ 	<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+		<view class="cu-item arrow" bindtap="navindex">
+			<view class="content">
+				<text class="cuIcon-evaluate_fill text-grey"></text>
+				<text class="text-grey">全部</text>				
+			</view>
+		</view>
+ 		<view class="cu-item arrow" wx:for="{{timeList}}" wx:key="index" bindtap="gettimeList" data-time="{{item.navtime}}">
+ 			<view class="content">
+ 				<text class="cuIcon-album text-grey"></text>
+ 				<text class="text-grey">{{item.navtime}}</text>				
+ 			</view>
+ 		</view>
+ 	</view>
+ </scroll-view>

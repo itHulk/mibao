@@ -1,0 +1,293 @@
+.container{
+	position: relative;
+	z-index: 1;
+    width: 710rpx;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	margin-bottom: 40rpx;
+}
+.listbox{
+	width:345rpx;
+	padding: 25rpx 0 ;
+}
+.list{
+	width: 345rpx;
+	color: #444;
+	display: block;
+	margin-bottom: 20rpx;
+	overflow: hidden;
+	border-radius: 10rpx;
+	background: #fff;
+	position: relative;
+	padding-bottom: 10rpx;
+}
+.list-image{
+	width: 100%;
+	display: block;
+	height: auto;
+	margin-bottom: 10rpx;
+}
+.dec{	
+	word-break: break-all; word-wrap:break-word; 
+	color: #333;
+	/* font-weight: bold; */
+	font-size: 26rpx;
+	line-height: 38rpx;
+	width: 305rpx;
+	position: relative;
+	/* text-overflow:ellipsis; */
+	margin-left: 20rpx;
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	
+}
+.agetab{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 40rpx;
+  border-radius:10rpx 0 10rpx 0;
+
+	padding: 0 10rpx;
+	background: rgba(255,255,255,0.5);
+	font-size: 24rpx;
+	line-height: 40rpx;
+	
+}
+.jinnianri.agetab{
+	color: #FFFFFF;
+	
+	background: rgba(246,68,68,0.9);
+}
+.userinfo{
+	display: flex;
+	justify-content: center;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 15rpx;
+	border-top: 1rpx solid #eee;
+	padding-top: 15rpx;
+	margin-bottom: 7rpx;
+}
+
+.avatar{
+	width: 35rpx;
+	height: 35rpx;
+	border-radius: 100%;
+}
+.name{font-size: 24rpx;
+margin-left: 10rpx;
+width: 260rpx;
+text-overflow:ellipsis;overflow:hidden;white-space:nowrap;
+line-height: 36rpx;
+}
+.data{
+	font-size: 26rpx;
+	/* line-height: 40rpx; */
+}
+.addicon{
+	position: fixed;
+	width: 100rpx;
+	height: 100rpx;
+	z-index: 2;
+	bottom: 100rpx;
+	right: 3%;
+}
+.navicon{
+	position: fixed;
+	width: 100rpx;
+	height: 100rpx;
+	z-index: 2;
+	bottom: 230rpx;
+	right: 3%;
+}
+.showNav{
+	position: fixed;
+	width: 100rpx;
+	height: 100rpx;
+	z-index: 2;
+	bottom: 220rpx;
+	right: 3%;
+}
+.showNav image{
+	width: 100%;
+	height: 100%;
+}
+.addimg{
+	width: 100rpx;
+	height:100rpx;
+}
+.addname{
+	color: #999;
+	font-size: 22rpx;
+	word-break: break-all; word-wrap:break-word;
+	width: 305rpx;
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	line-height: 30rpx;
+	margin-left: 20rpx;
+}
+.botMsg{
+	position: relative;
+	z-index: 3;
+	width: 100%;
+	font-size: 30rpx;
+	color: #ddd;
+	line-height: 60rpx;
+	text-align: center;
+}
+.boxleft{
+	position: fixed;
+	width: 200rpx;
+	height:100%;
+	text-align: center;
+	line-height: 80rpx;
+	right: 0;
+	top:0;
+	z-index: 3;
+	background:#fff;
+	color: #555;
+	display: flex;
+	/* align-items: center; */
+	justify-content: center;
+	}
+.navBox{
+	right:0rpx;
+	
+}
+.hidenavBox{
+
+	right: -100%;
+	
+}
+.scrollviewbox{
+
+	
+}
+.scrollview{
+	position: absolute;
+	top: 50%;
+	margin-top: -420rpx;
+	height: 900rpx;
+	width: 100%;
+	overflow: hidden;	
+}
+.scrollviewbox view{
+	height:60rpx ;
+	width: 100%;
+}
+
+
+
+page {
+  background-image: var(--gradualBlue);
+  width: 100vw;
+  overflow: hidden;
+}
+
+.DrawerPage {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0vw;
+  background-color: #f1f1f1;
+  transition: all 0.4s;
+}
+
+.DrawerPage.show {
+  transform: scale(0.9, 0.9);
+  left: 85vw;
+  box-shadow: 0 0 60rpx rgba(0, 0, 0, 0.2);
+  transform-origin: 0;
+}
+
+.DrawerWindow {
+  position: absolute;
+  width: 85vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transform: scale(0.9, 0.9) translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.DrawerWindow.show {
+  transform: scale(1, 1) translateX(0%);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.DrawerClose {
+  position: absolute;
+  width: 40vw;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  color: transparent;
+  padding-bottom: 30rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.6));
+  letter-spacing: 5px;
+  font-size: 50rpx;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.DrawerClose.show {
+  opacity: 1;
+  pointer-events: all;
+  width: 15vw;
+  color: #fff;
+}
+
+.DrawerPage .cu-bar.tabbar .action button.icon {
+  width: 64rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  margin: 0;
+  display: inline-block;
+}
+
+.DrawerPage .cu-bar.tabbar .action .cu-avatar {
+  margin: 0;
+}
+
+.DrawerPage .nav {
+  flex: 1;
+}
+
+.DrawerPage .nav .cu-item.cur {
+  border-bottom: 0;
+  position: relative;
+}
+
+.DrawerPage .nav .cu-item.cur::after {
+  content: "";
+  width: 10rpx;
+  height: 10rpx;
+  background-color: currentColor;
+  position: absolute;
+  bottom: 10rpx;
+  border-radius: 10rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.DrawerPage .cu-bar.tabbar .action {
+  flex: initial;
+}

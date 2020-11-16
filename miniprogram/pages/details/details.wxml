@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class="customBarGrid fixed {{ barBg ? 'bgf' : 'bgnone' }}" wx:if='{{ isBarShow }}' style="height:{{ CustomBar }}px;">
+  <view class="barGroup {{ barBg ? 'bgf' : 'bgnone' }}" style="height:{{ CustomBar }}px;padding-top:{{ StatusBar }}px;">
+    <view class="detatopbox" bindtap="toBack" style="top:{{ StatusBar }}px;">
+    	<image src="../../images/back.png" class="blackimg" bindtap="backPrv"></image>
+    </view>
+  </view>
+</view>
+
+<view class="topimg">
+
+	<image wx:if="{{imgNum>0}}" class='focusImg' src='cloud://jingchu-1d00o.6a69-jingchu-1d00o/baseimg/fengm{{imgNum}}.jpg' mode='aspectFill' style='filter: blur({{ focusBlur }}px); opacity:{{ focusOpacity }};'></image>
+</view>
+<view class="container detailBox">
+	<view class="userBox">
+		<image class="userimg" src="{{obj.userInfo.avatarUrl}}"></image>
+		<text class="name">{{obj.userInfo.nickName}}</text>
+	</view>
+	<view class="countBox">
+		<view class="dec">
+			{{obj.textValue}}
+		</view>
+		<view wx:if="{{!istest}}">
+			<view class="righttxt con-name">
+				<text>——{{obj.userInfo.nickName}}</text>
+			</view>
+			<view class="righttxt con-dta">{{obj.creatData}}</view>
+			<view wx:if="{{obj.addName=='无'?false:true}}" class="righttxt con-ads">{{obj.addName}}</view>
+		</view>
+	</view>
+	<view class="imgBox">
+		<block wx:for="{{obj.imgList}}" wx:key="index">
+			<image class="itemimg" mode="widthFix" src="{{item.tempFileURL}}" data-url="{{item.tempFileURL}}" bindtap='previewImage'></image>
+		</block>
+		
+	</view>
+</view>
+<view class="btnBox">
+	<view class="resBtn rightBtn" bindtap='resDoc' wx:if="{{showdel && !istest}}">
+		<text class="iconfont icon-bianji icon" ></text>
+	</view>
+	<view class="delBtn rightBtn" bindtap='delDoc' wx:if="{{showdel && !istest}}">
+		<text class="iconfont icon-shanchu icon" ></text>
+	</view>
+	<!-- <view class="resBtn rightBtn" bindtap='resDoc' wx:if="{{showdel && !istest}}">
+		<image class="btnimg" src="../../images/liuyan.png"></image>
+	</view> -->
+</view>
+<!-- <view class="textBox">
+	<view class="inputBox">
+		<input class="textInput" />
+	</view>
+	<view class="textBtn">发布</view>
+</view> -->
+
