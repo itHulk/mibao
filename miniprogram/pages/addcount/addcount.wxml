@@ -18,7 +18,7 @@
 	  </view>
 	</view>
 	<view class="countBox" style="top:{{ CustomBar }}px;">
-		<textarea class="textBox" placeholder="你想揍她几次" value="{{textvalue}}" maxlength='20000' bindinput="bindKeyInput">	
+		<textarea class="textBox" placeholder="你想揍他几次" value="{{textvalue}}" maxlength='20000' bindinput="bindKeyInput">	
 		</textarea>
 		<view class="imgBox">
 			<view wx:for="{{imgList}}" bindtap="showdel" wx:key="index" class="img" style="background: url({{item}}) no-repeat; background-position: center; background-size: cover;">
@@ -41,7 +41,7 @@
 		<view class="location" bindtap="seltype">
 			<image class="loacimg" src="../../images/girl.png"></image>
 			<text>米宝照片：</text>
-			<image class="isnanfang" src="../../images/onoff{{isnanfang?1:0}}.png"></image>
+			<image class="isnanfang" src="../../images/onoff{{ismibao?1:0}}.png"></image>
 		</view>
 		
 	</view>

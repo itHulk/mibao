@@ -68,16 +68,16 @@ Page({
 					_openid:res.result.openid 
 				}).get({
 					success: function(res) {	
-						// let data = res.data 
-						// if(data.length<1){
-						// 	app.globalData.isFirst=true
-						// }else{
-						// 	app.globalData.isFirst=false
-						// 	wx.redirectTo({
-						// 		url: '../list/list'
-						// 	})
-						// 	// return false
-						// }
+						let data = res.data 
+						if(data.length<1){
+							app.globalData.isFirst=true
+						}else{
+							app.globalData.isFirst=false
+							wx.redirectTo({
+								url: '../list/list'
+							})
+							// return false
+						}
 					}
 				})	
       },

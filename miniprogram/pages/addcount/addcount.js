@@ -19,7 +19,7 @@ Page({
 		imgList: [],
 		isdel: false,
 		locationname: '无',
-		isnanfang: false,
+		ismibao: false,
 		textvalue: '',
 		istest: true,
 		StatusBar: app.globalData.StatusBar, //系统给的值
@@ -48,7 +48,7 @@ Page({
 			imgList: [],
 			isdel: false,
 			locationname: '无',
-			isnanfang: false,
+			ismibao: false,
 			textvalue: '',
 			firstImg:''
 		})
@@ -88,7 +88,7 @@ Page({
 		this.setData({
 			textvalue: newobj.textValue,
 			locationname: newobj.addName,
-			isnanfang: newobj.isNanfang,
+			ismibao: newobj.isMibao,
 			imgList: newarrlist//赋值给页面
 		})
 		arrfilePath = newarrlist;//赋值给页面
@@ -332,21 +332,9 @@ Page({
 		let startYear = parseInt(creatData.slice(0, 4))
 		let nafmsg = ''
 		let dataType = 0
-		if (creatMd == '06/09') {
-			let n = startYear - 2018;
-			nafmsg = n + '周年结婚纪念日';
-			dataType = 1;
-		} else if (creatMd == '12/02') {
-			let mage = startYear - 1990;
-			nafmsg = '超人妈妈' + mage + '岁生日';
-			dataType = 2;
-		} else if (creatMd == '03/25') {
-			let bage = startYear - 1989;
-			nafmsg = '奶爸' + bage + '岁生日';
-			dataType = 3;
-		} else if (creatMd == '0/23') {
-			let xage = startYear - 2019;
-			nafmsg = '南方' + xage + '岁生日';
+		if (creatMd == '07/05') {
+			let xage = startYear - 2020;
+			nafmsg = '嘉硕' + xage + '岁生日';
 			dataType = 4
 		} else if (creatMd == '01/01') {
 			nafmsg = '新年快乐!';
@@ -360,10 +348,10 @@ Page({
 		let obj = {
 			textValue: this.data.textvalue,
 			addName: this.data.locationname,
-			isNanfang: this.data.isnanfang,
+			isMibao: this.data.ismibao,
 			imgList: getcouldurl, //有图片完成信息
 			timesTamp: (new Date()).valueOf(),
-			nfAge: nafmsg.length > 0 ? nafmsg : util.yearMouth(1558541220),
+			nfAge: nafmsg.length > 0 ? nafmsg : util.yearMouth(1593878400),
 			creatData,
 			navtime,
 			userInfo: app.globalData.userInfo,
@@ -437,7 +425,7 @@ Page({
 		let obj = {
 			textValue: this.data.textvalue,
 			addName: this.data.locationname,
-			isNanfang: this.data.isnanfang,
+			isMibao: this.data.ismibao,
 			imgList: geturl, //有图片完成信息
 			imgidList:newimgidList, //只有图片id
 			timesTamp: allobj.obj.timesTamp,
@@ -513,7 +501,7 @@ Page({
 	seltype: function() {
 		this.hidedel()
 		this.setData({
-			isnanfang: !this.data.isnanfang
+			ismibao: !this.data.ismibao
 		})
 	},
 

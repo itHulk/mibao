@@ -9,7 +9,7 @@
 
 <view class="topimg">
 
-	<image wx:if="{{imgNum>0}}" class='focusImg' src='cloud://jingchu-1d00o.6a69-jingchu-1d00o/baseimg/fengm{{imgNum}}.jpg' mode='aspectFill' style='filter: blur({{ focusBlur }}px); opacity:{{ focusOpacity }};'></image>
+	<image wx:if="{{imgNum>0}}" class='focusImg' src='cloud://test-djq78.7465-test-djq78-1304216232/baseimg/fengm{{imgNum}}.jpg' mode='aspectFill' style='filter: blur({{ focusBlur }}px); opacity:{{ focusOpacity }};'></image>
 </view>
 <view class="container detailBox">
 	<view class="userBox">
