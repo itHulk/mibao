@@ -48,9 +48,11 @@
 	</view>
 	
  </scroll-view>
+<!-- 日历返回 -->
 <view class="DrawerClose {{modalName=='viewModal'?'show':''}}" bindtap="hideModal">
- 	<text class="cuIcon-pullright"></text>
- </view>
+	<text class="cuIcon-pullright"></text>
+</view>
+ <!-- 日期选择 -->
  <scroll-view scroll-y class="DrawerWindow {{modalName=='viewModal'?'show':''}}">
  	<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
 		<view class="cu-item arrow" bindtap="navindex">

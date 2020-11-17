@@ -9,10 +9,10 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-		passData:'',
-		islogin:false,
-		isFirst:false,
-		isTest:true,
+	passData:'',
+	islogin:false,
+	isFirst:false,
+	isTest:true,
   },
 
   onLoad: function() {
@@ -20,39 +20,39 @@ Page({
 		wx.getSetting({
 		  success: res => {
 		    if (res.authSetting['scope.userInfo']) {
-					// console.log('已经授权')
-		      wx.getUserInfo({
-		        success: res => {								
-		          that.setData({
-								islogin:true,
-		            avatarUrl: res.userInfo.avatarUrl,
-		            userInfo: res.userInfo
-		          })					
-							app.globalData.userInfo = res.userInfo
-              // console.log('getbaseData')
-							this.getbaseData()
-							this.onGetOpenid()
-		        }
-		      })
+				wx.getUserInfo({
+					success: res => {	
+						console.log(res, '已经授权')							
+						that.setData({
+							islogin:true,
+							avatarUrl: res.userInfo.avatarUrl,
+							userInfo: res.userInfo
+						})					
+						app.globalData.userInfo = res.userInfo
+						this.getbaseData()
+						this.onGetOpenid()
+					}
+				})
 		    }else{
-          this.getbaseData()
-        }
+          		this.getbaseData()
+        	}
 		  }
 		})	
   },
 
 
   onGetUserInfo: function(e) {
+	console.log(e.detail.userInfo, 'e.detail.userInfo')
     if (!this.logged && e.detail.userInfo) {
-      this.setData({
-				logged:true,
-				islogin:true,
-        avatarUrl: e.detail.userInfo.avatarUrl,
-        userInfo: e.detail.userInfo
-      })
-			app.globalData.userInfo =e.detail.userInfo
-			this.getbaseData()
-			this.onGetOpenid()
+		this.setData({
+			logged:true,
+			islogin:true,
+			avatarUrl: e.detail.userInfo.avatarUrl,
+			userInfo: e.detail.userInfo
+		})
+		app.globalData.userInfo =e.detail.userInfo
+		this.getbaseData()
+		this.onGetOpenid()
     }
   },
 
@@ -64,22 +64,22 @@ Page({
       success: res => {
         // console.log('[云函数] [login] user openid: ', res.result.openid)
         app.globalData.openid = res.result.openid  
-				db.collection('homeId').where({
-					_openid:res.result.openid 
-				}).get({
-					success: function(res) {	
-						let data = res.data 
-						if(data.length<1){
-							app.globalData.isFirst=true
-						}else{
-							app.globalData.isFirst=false
-							wx.redirectTo({
-								url: '../list/list'
-							})
-							// return false
-						}
-					}
-				})	
+		db.collection('homeId').where({
+			_openid:res.result.openid 
+		}).get({
+			success: function(res) {	
+				let data = res.data 
+				if(data.length<1){
+					app.globalData.isFirst=true
+				}else{
+					app.globalData.isFirst=false
+					wx.redirectTo({
+						url: '../list/list'
+					})
+					// return false
+				}
+			}
+		})	
       },
       fail: err => {
       }

@@ -16,6 +16,12 @@
 	font-weight: 500;
 	color: #333;
 }
+.content {
+	font-size: 32rpx;
+	font-weight: 500;
+	color: #333;
+	margin-top: 20rpx;
+}
 .topimg{
 	width: 100%;	
 	display: block;

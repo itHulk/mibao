@@ -8,7 +8,6 @@
 </view>
 
 <view class="topimg">
-
 	<image wx:if="{{imgNum>0}}" class='focusImg' src='cloud://test-djq78.7465-test-djq78-1304216232/baseimg/fengm{{imgNum}}.jpg' mode='aspectFill' style='filter: blur({{ focusBlur }}px); opacity:{{ focusOpacity }};'></image>
 </view>
 <view class="container detailBox">
@@ -17,8 +16,11 @@
 		<text class="name">{{obj.userInfo.nickName}}</text>
 	</view>
 	<view class="countBox">
-		<view class="dec">
+		<view class="dec" style="{{ istest ? 'text-align:center':'text-align:left'}}">
 			{{obj.textValue}}
+		</view>
+		<view wx:if="{{istest}}" class="content">
+			{{obj.contentValue}}
 		</view>
 		<view wx:if="{{!istest}}">
 			<view class="righttxt con-name">

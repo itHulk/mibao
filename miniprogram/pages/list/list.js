@@ -211,7 +211,7 @@ Page({
 		return {
 			title: `米宝小帅哥`,
 			path: `/pages/index/index`,
-			imageUrl: `../../images/tuzi.jpg`,
+			imageUrl: `../../images/life.png`,
 		}
 	},
 	//滑动触底

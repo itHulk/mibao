@@ -7,7 +7,7 @@
       open-type="getUserInfo" 
       bindgetuserinfo="onGetUserInfo"
       class="userinfo-avatar"
-	  wx-if="{{!islogin}}"
+	    wx-if="{{!islogin}}"
     ></button>
   </view>
 	<view class="fromBox">
